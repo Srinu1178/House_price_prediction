@@ -12,14 +12,14 @@ from sklearn.preprocessing import StandardScaler
 
 # Load trained models
 custom_objects = {"mse": MeanSquaredError()}
-ann_model = load_model(r"D:\Research\best_ann.h5", custom_objects=custom_objects)
-lstm_model = load_model(r"D:\Research\best_lstm.h5", custom_objects=custom_objects)
+ann_model = load_model(r"best_ann.h5", custom_objects=custom_objects)
+lstm_model = load_model(r"best_lstm.h5", custom_objects=custom_objects)
 
 with open(r"D:\Research\best_xgb.pkl", "rb") as file:
     xgb_model = pickle.load(file)
 
 # Load dataset
-data = pd.read_csv(r"D:\Research\Project\Bengaluru_House_Data.csv")
+data = pd.read_csv(r"Bengaluru_House_Data.csv")
 feature_columns = ['total_sqft', 'bath', 'balcony']
 
 # Function to clean and preprocess 'total_sqft' column
