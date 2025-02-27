@@ -15,7 +15,7 @@ custom_objects = {"mse": MeanSquaredError()}
 ann_model = load_model(r"best_ann.h5", custom_objects=custom_objects)
 lstm_model = load_model(r"best_lstm.h5", custom_objects=custom_objects)
 
-with open(r"D:\Research\best_xgb.pkl", "rb") as file:
+with open(r"best_xgb.pkl", "rb") as file:
     xgb_model = pickle.load(file)
 
 # Load dataset
