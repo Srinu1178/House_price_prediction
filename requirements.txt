@@ -5,4 +5,5 @@ tensorflow
 xgboost
 shap
 matplotlib
+seaborn
 scikit-learn
